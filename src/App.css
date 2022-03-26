@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'montserrat', sans-serif;
+  font-size: 15px;
 }
 
 .App-logo {
@@ -37,6 +39,10 @@
   }
 }
 
+@font-face {
+  font-family: 'dreamOnly';
+  src: url(./DreamOnly.ttf); }
+
 .header{
   align-items: flex-end;
   padding: 20px;
@@ -51,13 +57,17 @@
 .nav{
   text-align: center;
   justify-content: space-between;
+  padding-top: 25px;
 }
 .cartIcon{
   width: 30px;
 }
 .brandName{
   color: #d69c93;
-  font-weight: 100;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px 0px;
+  font-family: 'DreamOnly';
 }
 
 .navItem{
@@ -68,4 +78,9 @@
 .active{
   color: #d69c93 !important;
   font-weight: 600;
+}
+.title{
+  color: #d69c93;
+  font-size: 25px;
+  font-weight: 400;
 }
