@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  align-items: flex-end;
+  padding: 20px;
+  background-image: linear-gradient(#eec5b9, white);
+  text-align: center;
+  justify-content: space-between;
+}
+.headerNav, .headerCart{
+  padding-top: 20px;
+}
+
+.nav{
+  text-align: center;
+  justify-content: space-between;
+}
+.cartIcon{
+  width: 30px;
+}
+.brandName{
+  color: #d69c93;
+  font-weight: 100;
+}
+
+.navItem{
+  color: #575757 !important;
+  font-weight: 400;
+} 
+
+.active{
+  color: #d69c93 !important;
+  font-weight: 600;
+}
