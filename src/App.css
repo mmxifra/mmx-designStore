@@ -68,3 +68,48 @@
   border: none;
   border-radius: 5px;
 }
+
+.itemContainer{
+  margin-top: 30px;
+}
+
+.cardData{
+  margin: 5px;
+  padding: 20px 20px 2px 20px;
+  background-color: #F6DFD6;
+  border-radius: 20px;
+}
+
+.itemImg{
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.itemTitle{
+  color: #575757;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.itemPrice{
+  color: #d69c93;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.descriptionBtn{
+  color: #575757;
+  background-color: #eec5b9;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.itemStock {
+  margin: 10px;
+  color: #575757;
+}
