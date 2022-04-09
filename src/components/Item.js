@@ -1,9 +1,9 @@
 
 
-const Item = ({img, title, price, stock}) => {
+const Item = ({id, img, title, price, stock}) => {
     return (
         <div className="col-lg-3 col-md-6 col-xs-12 itemContainer">
-            <div className="cardData">
+            <div className="cardData" key={id}>
 				<img src= {img} className= "itemImg" />
 				<h2 className= "itemTitle">{title}</h2>
 				<p className= "itemPrice">$ {price}</p>

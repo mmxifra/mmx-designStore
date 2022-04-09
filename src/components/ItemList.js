@@ -4,14 +4,16 @@ const ItemList = ({items}) => {
     return (
         <div className="row">
         {
-            items.map (item =>
-                <Item
+            items.length > 0
+            ? items.map (item =>
+                <Item 
                 key = {item.id}
                 img = {item.img}
                 title = {item.title} 
                 price = {item.price}
                 stock = {item.stock} /> 
             )
+            : <p> Cargando productos ...</p>
         }
         </div>
     );
