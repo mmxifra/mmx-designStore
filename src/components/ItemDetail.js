@@ -1,7 +1,6 @@
 import ItemCount from "./ItemCount";
 
-
-const ItemDetail = ({item}) => {
+const ItemDetail = ({ item }) => {
 
     const onAdd = (qty) => {
         alert("Seleccionaste " + qty + " kilos del Articulo " + item.title);
@@ -10,7 +9,7 @@ const ItemDetail = ({item}) => {
     return (
         <>
         {
-            item.img
+            item && item.img
             ?
             <div className="row detailContainer">
                 <div className="col-lg-5 col-md-5 col-xs-12 detailImg">

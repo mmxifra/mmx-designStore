@@ -1,4 +1,5 @@
-import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.svg';
 import CartWidget from './CartWidget';
 
 const Navbar =() =>{
@@ -6,17 +7,15 @@ const Navbar =() =>{
         <>
             <header className='row header navbar-expand-lg navbar-light'>
                 <div className='col-lg-3 col-md-3 col-xs-12 headerLogo'>
-                <a href='#'>
-                    <img src={logo} className='brandLogo' alt='brand Logo' />
-                </a>
+                    <Link to='/'><img src={logo} className='brandLogo' alt='brandLogo' /></Link>
                 </div>
                 <div className='col-lg-6 col-md-6 col-xs-12 headerNav'>
-                    <h1 className='brandName'> MmX Diseño </h1>
+                <h1 className='brandName'> MmX Diseño </h1>
                     <nav className='nav'>
-                        <a className='nav-link navItem' href='#'>Jersey Alg</a>
-                        <a className='nav-link navItem' href='#'>Modal</a>
-                        <a className='nav-link navItem' href='#'>Morley</a>
-                        <a className='nav-link navItem' href='#'>Polar Soft</a>
+                        <Link to='/category/jersey-algodon'><a className='nav-link navItem' href='#'>Jersey Alg</a></Link>
+                        <Link to='/category/modal'><a className='nav-link navItem' href='#'>Modal</a></Link>
+                        <Link to='/category/morley'><a className='nav-link navItem' href='#'>Morley</a></Link>
+                        <Link to='/category/polar-soft'><a className='nav-link navItem' href='#'>Polar Soft</a></Link>
                     </nav>
                 </div>
                 <CartWidget />

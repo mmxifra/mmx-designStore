@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Item = ({id, img, title, price, stock}) => {
@@ -7,7 +8,7 @@ const Item = ({id, img, title, price, stock}) => {
 				<img src= {img} className= "itemImg" />
 				<h2 className= "itemTitle">{title}</h2>
 				<p className= "itemPrice">$ {price}</p>
-				<button className= "descriptionBtn">+ Detalles</button>
+				<Link to= {`/item/${id}`} ><button className= "descriptionBtn">+ Detalles</button></Link>
                 <p className= "itemStock">{stock} kilos en stock</p>
 			</div>
         </div>

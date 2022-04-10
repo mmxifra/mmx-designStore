@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'dreamOnly';
-  src: url(./DreamOnly.ttf); }
+  src: url(./assets/DreamOnly.ttf); }
 
 .header{
   align-items: flex-end;
