@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# MMX - Diseño y desarrollo textil
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Proyecto para curso de ReactJS
 
-## Available Scripts
+MMX Diseño es un e-commerce de estampados propios, exclusivos desarrollados en varias bases. Textiles desarrollados por María Manuela Xifra, Diseñadora textil - FADU-UBA.  
 
-In the project directory, you can run:
+El sitio es una SPA (Single Page Application).
 
-### `npm start`
+### Home
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En esta vista se encuentran todos los productos de la tienda. (Link al home en el logo)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Menu de Navegación 
 
-### `npm test`
+* Jersey Algodón 
+* Modal
+* Morley
+* Polar Soft
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En cada vista se muestran solo los productos correspondientes al textil seleccionado. 
 
-### `npm run build`
+### Cart
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En esta vista se mostraran los productos seleccionados por el usuario para ser adquiridos. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Detalles de producto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+HAciendo click en el boton "+ detalles" de cada producto accedemos a la vista con todos las especificaciones de ese producto particular. 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalacion
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clonar el repositorio.
+2. En el directorio raiz del proyecto correr el comando `npm install` para instalar todas las dependencias del proyecto. 
+3. Usar `npm start` para correr la app y verla en el navegador. Se abrirá http://localhost:3000. La página se recargará cada vez que se haga un cambio. Pueden visualizarse los errores por consola. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencias
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ * Bootstrap para dar formato a la aplicación.
+ * React Router Dom para la navegación. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ### Autor: María Manuela Xifra
+2022 - Curso de ReactJS en CoderHouse
