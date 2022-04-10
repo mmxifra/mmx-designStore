@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
         customFetch (2000, products.find (item => item.id == idItem))
             .then (result => setDato (result))
             .catch (error =>console.log (error))
-    }, []);
+    }, [dato]);
     
     return (
         <ItemDetail item={dato} />

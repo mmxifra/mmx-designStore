@@ -12,10 +12,10 @@ const Navbar =() =>{
                 <div className='col-lg-6 col-md-6 col-xs-12 headerNav'>
                 <h1 className='brandName'> MmX Diseño </h1>
                     <nav className='nav'>
-                        <Link to='/category/jersey-algodon'><a className='nav-link navItem' href='#'>Jersey Alg</a></Link>
-                        <Link to='/category/modal'><a className='nav-link navItem' href='#'>Modal</a></Link>
-                        <Link to='/category/morley'><a className='nav-link navItem' href='#'>Morley</a></Link>
-                        <Link to='/category/polar-soft'><a className='nav-link navItem' href='#'>Polar Soft</a></Link>
+                        <Link to='/category/jersey-algodon'><p className='nav-link navItem'>Jersey Alg</p></Link>
+                        <Link to='/category/modal'><p className='nav-link navItem'>Modal</p></Link>
+                        <Link to='/category/morley'><p className='nav-link navItem'>Morley</p></Link>
+                        <Link to='/category/polar-soft'><p className='nav-link navItem'>Polar Soft</p></Link>
                     </nav>
                 </div>
                 <CartWidget />

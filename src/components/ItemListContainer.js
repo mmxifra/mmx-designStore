@@ -19,7 +19,7 @@ const ItemListContainer = () =>{
                 .then (result => setDatos(result))
                 .catch(error => console.log (error))
         };
-    }, [datos]);
+    }, [idCategory]);
 
     return (
         <>
