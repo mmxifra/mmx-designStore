@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const ItemCount = ({stock, initial, onAdd}) => {
-    const [amount, setAmount] = useState(1);
+    const [amount, setAmount] = useState(0);
 
     useEffect(() =>{
         setAmount(initial);
@@ -24,7 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button className="countBtn" onClick={increment}>+</button>
             <span className="countAmount">{amount}</span>
             <button className="countBtn" onClick={decrement}>-</button>
-            <button className="countBtn" onClick={() => {onAdd(amount)}}>Agregar al carrito</button>
+            <button className="countBtn" disabled ={amount === 0} onClick={() => {onAdd(amount)}}>Agregar al carrito</button>
         </div>
     );
 };

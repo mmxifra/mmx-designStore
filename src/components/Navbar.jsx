@@ -18,7 +18,7 @@ const Navbar =() =>{
                         <Link to='/category/polar-soft'><p className='nav-link navItem'>Polar Soft</p></Link>
                     </nav>
                 </div>
-                <CartWidget />
+                <Link to='/cart'><CartWidget /></Link>
             </header>
         </>
     );
