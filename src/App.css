@@ -1,12 +1,37 @@
+/*general */
+
 .App {
   text-align: center;
   font-family: 'montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 62,5%;
+  overflow-x: hidden;
+  color: #575757;
 }
 
 @font-face {
   font-family: 'dreamOnly';
-  src: url(./assets/DreamOnly.ttf); }
+  src: url(./assets/DreamOnly.ttf); 
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+  font-weight: 400;
+  scale: 1.2;
+}
+
+/*header -nav */
 
 .header{
   align-items: flex-end;
@@ -30,8 +55,8 @@
 }
 .brandName{
   color: #d69c93;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 10px;
   padding: 10px 0px;
   font-family: 'DreamOnly';
 }
@@ -44,22 +69,17 @@
   font-weight: 400;
 } 
 
-a{
-  text-decoration: none;
-  font-weight: 400;
-  scale: 1.2;
-}
-
 .active{
   color: #d69c93 !important;
   font-weight: 600;
 }
 .title{
   color: #d69c93;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
+/* ItemCount */
 .countDiv{
   margin-top: 20px;
 }
@@ -68,13 +88,16 @@ a{
   padding: 5px 10px;
 }
 
-.countBtn{
+.generalBtn{ 
   padding: 5px 15px;
   margin: 5px;
   background-color: #eec5b9;
   border: none;
   border-radius: 5px;
+  font-size: 0.8rem;
 }
+
+/*item + item detail*/
 
 .itemContainer{
   margin-top: 30px;
@@ -94,14 +117,14 @@ a{
 
 .itemTitle{
   color: #575757;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 700;
   margin: 20px;
 }
 
 .itemPrice{
   color: #d69c93;
-  font-size: 18px;
+  font-size: 0.8rem;
   font-weight: 600;
   margin: 20px;
 }
@@ -111,7 +134,7 @@ a{
   background-color: #eec5b9;
   border-radius: 10px;
   border: none;
-  font-size: 15px;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 10px 20px;
 }
@@ -119,9 +142,50 @@ a{
 .itemStock {
   margin: 10px;
   color: #575757;
+  font-size: 0.8rem;
 }
 
 .detailContainer {
   margin-top: 25px;
   padding: 25px;
+  align-items: center;
+}
+
+/*cart*/
+
+.cartItemContainer{
+  padding: 0px 25px 0px 25px;
+  border: 2px #eec5b9;
+  align-items: center;
+}
+.imgCart{
+  max-width: 60%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.emptyBtn {
+  background-color: #b1b1b2;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.shopBtn {
+  background-color: #eec5b9;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.deleteBtn {
+  background-color: white;
+  color: #b1b1b2;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cartTitle {
+  color: #b1b1b2;
+  font-weight: 600;
 }
