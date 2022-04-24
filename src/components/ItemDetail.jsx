@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
-import { CartContext } from "./CartContext";
-import ItemCheckout from "./ItemCheckout";
-import ItemCount from "./ItemCount";
+import { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
+import ItemCheckout from './ItemCheckout';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
     const test = useContext(CartContext);
 
     const onAdd = (qty) => {
-        alert("Seleccionaste " + qty + " kilos del Articulo " + item.title);
+        alert('Seleccionaste ' + qty + ' kilos del Articulo ' + item.title);
         setItemCount(qty);
         test.addToCart(item, qty)
     };
@@ -18,15 +18,15 @@ const ItemDetail = ({ item }) => {
         {
             item && item.img
             ?
-            <div className="row detailContainer">
-                <div className="col-lg-5 col-md-5 col-xs-12 detailImg">
-                    <img src= {item.img} className= "itemImg" />
+            <div className='row detailContainer'>
+                <div className='col-lg-5 col-md-5 col-xs-12 detailImg'>
+                    <img src= {item.img} className= 'itemImg' alt= {item.title} />
                 </div>
-                <div className="col-lg-7 col-md-7 col-xs-12 detailImg">
-                    <h2 className= "itemTitle">{item.title}</h2>
-                    <p className= "itemDetail">{item.description}</p>
-                    <p className= "itemPrice">$ {item.price}</p>
-                    <p className= "itemStock">{item.stock} kilos en stock</p>
+                <div className='col-lg-7 col-md-7 col-xs-12 detailImg'>
+                    <h2 className= 'itemTitle'>{item.title}</h2>
+                    <p className= 'itemDetail'>{item.description}</p>
+                    <p className= 'itemPrice'>$ {item.price}</p>
+                    <p className= 'itemStock'>{item.stock} kilos en stock</p>
                     {
                         itemCount === 0
                         ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />

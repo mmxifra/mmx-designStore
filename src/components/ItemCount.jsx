@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [amount, setAmount] = useState(0);
@@ -20,11 +20,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
     };
     
     return(
-        <div className="countDiv">
-            <button className="generalBtn" onClick={increment}>+</button>
-            <span className="countAmount">{amount}</span>
-            <button className="generalBtn" onClick={decrement}>-</button>
-            <button className="generalBtn" disabled ={amount === 0} onClick={() => {onAdd(amount)}}>Agregar al carrito</button>
+        <div className='countDiv'>
+            <button className='generalBtn' onClick={increment}>+</button>
+            <span className='countAmount'>{amount}</span>
+            <button className='generalBtn' onClick={decrement}>-</button>
+            <button className='generalBtn' disabled ={amount === 0} onClick={() => {onAdd(amount)}}>Agregar al carrito</button>
         </div>
     );
 };

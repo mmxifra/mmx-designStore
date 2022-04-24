@@ -1,8 +1,9 @@
-import ItemList from "./ItemList";
-import { useEffect, useState } from "react";
-import customFetch from "../utils/customFetch";
-import { useParams } from "react-router-dom";
-const { products } = require("../utils/products");
+import ItemList from './ItemList';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
+import db from '../utils/firebaseConfig'
+
 
 
 const ItemListContainer = () =>{
@@ -10,15 +11,23 @@ const ItemListContainer = () =>{
     const {idCategory} = useParams();
 
     useEffect(() => {
-        if (idCategory === undefined) {
-            customFetch (2000, products)
-                .then (result => setDatos(result))
-                .catch(error => console.log (error))
-        } else {
-            customFetch (2000, products.filter(item => item.categoryId === (idCategory)))
-                .then (result => setDatos(result))
-                .catch(error => console.log (error))
+        const fetchFromFirestore = async () => {
+            let q;
+            if (idCategory === undefined) {
+                q = query(collection(db, 'products'), orderBy('title'))
+            } else {
+                q = query(collection(db, 'products'), where('categoryId', '==', idCategory))
+            }
+            const querySnapshot = await getDocs(q);
+            const dataFromFirestore = querySnapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+            return dataFromFirestore;
         };
+        return fetchFromFirestore ()
+            .then (result => setDatos(result))
+            .catch (error => console.log(error))
     }, [idCategory]);
 
     return (

@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 const ItemCheckout = () => {
     return (
         <>
-        <Link to={'/cart'}><button className="generalBtn" >Ver Carrito</button></Link>
+        <Link to={'/cart'}><button className='generalBtn' >Ver Carrito</button></Link>
         </>
     );
 };
