@@ -1,10 +1,50 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
-
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import db from '../utils/firebaseConfig';
 
 const Cart = () => {
     const test = useContext(CartContext);
+
+    const checkout = () => {
+        
+        test.cartList.forEach(async (item) => {
+            const itemRef = doc(db, 'products', item.id);
+            await updateDoc(itemRef, {
+                stock: increment(-item.itemQty)
+            });
+        });
+
+        let order = {
+            buyer: {
+                name: 'María Xifra',
+                email:'maria@gmail.com',
+                phone: '123456789'
+            },
+            date: serverTimestamp(),
+            items: test.cartList.map( item =>({
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                qty: item.itemQty
+            })),
+            total: test.cartTotal()
+        }
+        console.log (order)
+
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc (collection (db,'orders'));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+
+        createOrderInFirestore()
+            .then(result => alert ('tu orden ha sido creada. Muchas gracias por tu compra.'))
+            .catch(error => console.log (error))
+        
+        test.emptyCart();
+    }
     return (
         <>
             <h3 className='cartTitles'>CARRITO</h3>
@@ -62,7 +102,7 @@ const Cart = () => {
                             <p>$ {test.cartTotal()} </p>
                         </div>
                         <div className='col-lg-12 col-md-12 col-xs-12 summaryCart'>
-                            <button className='generalBtn shopBtn endPurchaseBtn'>Terminar compra</button>
+                            <button onClick={checkout} className='generalBtn shopBtn endPurchaseBtn'>Terminar compra</button>
                         </div>
                     </div>
                 )
