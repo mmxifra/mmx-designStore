@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
         {
             item && item.img
             ?
-            <div className='row detailContainer'>
+            <div className='row detailContainer body'>
                 <div className='col-lg-5 col-md-5 col-xs-12 detailImg'>
                     <img src= {item.img} className= 'itemImg' alt= {item.title} />
                 </div>

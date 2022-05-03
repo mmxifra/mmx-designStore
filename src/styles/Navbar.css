@@ -1,0 +1,48 @@
+/*header -nav */
+
+.header{
+    align-items: flex-end;
+    padding: 20px;
+    background-image: linear-gradient(#eec5b9, white);
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .headerNav, .headerCart{
+    padding-top: 20px;
+  }
+  
+  .nav{
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  .cartIcon{
+    width: 30px;
+  }
+  .brandName{
+    color: #d69c93;
+    font-size: 1rem;
+    line-height: 10px;
+    padding: 10px 0px;
+    font-family: 'DreamOnly';
+  }
+  .brandLogo {
+    max-width: 100px;
+  }
+  
+  .navItem{
+    color: #575757 !important;
+    font-weight: 400;
+  } 
+  
+  .active{
+    color: #d69c93 !important;
+    font-weight: 600;
+  }
+  .title{
+    color: #d69c93;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  

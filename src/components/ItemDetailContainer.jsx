@@ -1,3 +1,4 @@
+import '../styles/Items.css';
 import { doc, getDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';

@@ -59,13 +59,27 @@ const CartContextProvider = ({children}) => {
         return Math.floor(cartSubTotal() * 0.21);
     };
 
+    // Calcular envio
+
+    const shipping = () => {
+        let shipCost;
+        if(qtyOnCart() <= 5){
+            shipCost = 2000
+        } else if (qtyOnCart() <= 10){
+            shipCost = 1000
+        } else {
+            shipCost = 0
+        }
+        return shipCost;
+    };
+
     // Calcular total final
     const cartTotal = () => {
-        return cartSubTotal() + cartIva();
+        return cartSubTotal() + cartIva() + shipping();
     };
 
     return (
-        <CartContext.Provider value ={{cartList, addToCart, removeItem, emptyCart, qtyOnCart, totalCostItem, cartSubTotal, cartIva, cartTotal}}>
+        <CartContext.Provider value ={{cartList, addToCart, removeItem, emptyCart, qtyOnCart, totalCostItem, cartSubTotal, cartIva,shipping, cartTotal}}>
             {children}
         </CartContext.Provider>
     );    

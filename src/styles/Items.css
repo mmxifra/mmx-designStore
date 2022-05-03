@@ -1,0 +1,72 @@
+/*item + item detail*/
+
+.itemContainer{
+    margin-top: 30px;
+  }
+  
+  .cardData{
+    margin: 5px;
+    padding: 20px 20px 2px 20px;
+    background-color: #F6DFD6;
+    border-radius: 20px;
+  }
+  
+  .itemImg{
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .itemTitle{
+    color: #575757;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 20px;
+  }
+  
+  .itemPrice{
+    color: #d69c93;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 20px;
+  }
+  
+  .descriptionBtn{
+    color: #575757;
+    background-color: #eec5b9;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 20px;
+  }
+  
+  .itemStock {
+    margin: 10px;
+    color: #575757;
+    font-size: 0.8rem;
+  }
+  
+  .detailContainer {
+    margin-top: 25px;
+    padding: 25px;
+    align-items: center;
+  }
+  
+  /* ItemCount */
+  .countDiv{
+    margin-top: 20px;
+  }
+  
+  .countAmount{
+    padding: 5px 10px;
+  }
+  
+  .generalBtn{ 
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: #eec5b9;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  

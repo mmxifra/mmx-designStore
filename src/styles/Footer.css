@@ -1,0 +1,17 @@
+/* footer */
+.footer{
+    align-items: flex-end;
+    padding: 24px ;
+    background-image: linear-gradient(white, #eec5b9);
+    text-align: center;
+    justify-content: space-between;
+  }
+   .footerIcon{
+     width: 4rem;
+     padding: 10px;
+   }
+  
+   .footLogo {
+    width: 6rem;
+    padding: 10px;
+  }
