@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import swal from 'sweetalert';
 import { CartContext } from '../context/CartContext';
 import ItemCheckout from './ItemCheckout';
 import ItemCount from './ItemCount';
@@ -8,7 +9,12 @@ const ItemDetail = ({ item }) => {
     const test = useContext(CartContext);
 
     const onAdd = (qty) => {
-        alert('Seleccionaste ' + qty + ' kilos del Articulo ' + item.title);
+        swal ({
+            title: 'Agregado al carrito',
+            icon: 'success',
+            Button: true,
+            timer: 2500
+        })
         setItemCount(qty);
         test.addToCart(item, qty)
     };

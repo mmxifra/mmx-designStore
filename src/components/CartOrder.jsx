@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import db from '../utils/firebaseConfig';
+import swal from 'sweetalert';
 
 const CartOrder = () => {
 
@@ -40,7 +41,12 @@ const CartOrder = () => {
         }
 
         createOrderInFirestore()
-            .then(result => alert('tu orden ha sido creada. Muchas gracias por tu compra.'))
+            .then(result => swal ({
+                text: 'Tu pedido ha sido confirmado',
+                title: 'Gracias por tu compra',
+                icon: 'success',
+                Button: 'Ok',
+            }))
             .catch(error => console.log (error))
         
         test.emptyCart();

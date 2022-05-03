@@ -8,6 +8,7 @@ const CartDetail = () => {
 
     return (
         //si el carrito tiene algo muestra los productos en el carrito
+        // si el carrito esta vacio muestra boton para agregar
         <>
             {
                 test.cartList.length > 0
@@ -25,7 +26,6 @@ const CartDetail = () => {
                 </div>
             } 
             <hr/>
-            {/*si no hay productos muestra boton para agregar productos */}
             {
                 test.cartList.length > 0 && (
                 test.cartList.map (item =>(
