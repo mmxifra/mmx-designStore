@@ -1,5 +1,8 @@
 # MMX - Diseño y desarrollo textil
 
+ ![image]( https://github.com/mmxifra/mmx-designStore/blob/master/mmxDesignStore.gif)
+
+
 ## Proyecto para curso de ReactJS
 
 MMX Diseño es un e-commerce de estampados propios, exclusivos desarrollados en varias bases. Textiles desarrollados por María Manuela Xifra, Diseñadora textil - FADU-UBA.  
