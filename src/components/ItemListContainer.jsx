@@ -5,8 +5,6 @@ import { useParams } from 'react-router-dom';
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import db from '../utils/firebaseConfig'
 
-
-
 const ItemListContainer = () =>{
     const [datos, setDatos] = useState([]);
     const {idCategory} = useParams();

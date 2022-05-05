@@ -5,7 +5,6 @@ import Fb from '../assets/facebook.svg';
 import Ig from '../assets/instagram.svg';
 import In from '../assets/linkedIn.svg';
 
-
 const Footer = () => {
     return (
         <footer className='row footer'>

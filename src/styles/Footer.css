@@ -1,8 +1,9 @@
 /* footer */
-.footer{
+  .footer{
     align-items: flex-end;
+    margin-top: 20px;
     padding: 24px ;
-    background-image: linear-gradient(white, #eec5b9);
+    background-image: linear-gradient(white, #f6dfd6, white);
     text-align: center;
     justify-content: space-between;
   }

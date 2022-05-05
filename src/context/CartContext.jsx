@@ -39,7 +39,7 @@ const CartContextProvider = ({children}) => {
     // Cantidad total en el carrito 
     const qtyOnCart = () => {
         let cartQty = cartList.map (item => item.itemQty);
-        return cartQty.reduce (((prevValue, CurrentValue) => prevValue + CurrentValue), 0);
+        return cartQty.reduce (((prevValue, currentValue) => prevValue + currentValue), 0);
     };
 
     // Calcular costo total de cada articulo segun cantidad

@@ -1,12 +1,12 @@
 import '../styles/Cart.css';
-import CartDetail from './CartDetail';
+import CartItemsDetail from './CartItemsDetail';
 import CartOrder from './CartOrder';
 
 const Cart = () => {
     return (
         <>
             <h3 className='cartTitles'>CARRITO</h3>
-            <CartDetail/>
+            <CartItemsDetail/>
             <CartOrder/>
         </>
     );

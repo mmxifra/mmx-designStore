@@ -12,11 +12,11 @@ const Navbar =() =>{
                 </div>
                 <div className='col-lg-9 col-md-9 col-xs-12 headerNav'>
                 <h1 className='brandName'> MmX Diseño </h1>
-                    <nav className='nav'>
-                        <Link to='/category/jersey-algodon'><p className='nav-link navItem'>Jersey Alg</p></Link>
-                        <Link to='/category/modal'><p className='nav-link navItem'>Modal</p></Link>
-                        <Link to='/category/morley'><p className='nav-link navItem'>Morley</p></Link>
-                        <Link to='/category/polar-soft'><p className='nav-link navItem'>Polar Soft</p></Link>
+                    <nav className='navbar-nav nav'>
+                        <Link to='/category/jersey-algodon'  className='nav-link'> Jersey Alg</Link>
+                        <Link to='/category/modal'  className='nav-link'> Modal</Link>
+                        <Link to='/category/morley'  className='nav-link'> Morley</Link>
+                        <Link to='/category/polar-soft'  className='nav-link'> Polar Soft</Link>
                         <Link to='/cart'><CartWidget /></Link>
                     </nav>
                 </div>
@@ -26,3 +26,4 @@ const Navbar =() =>{
 };
 
 export default Navbar; 
+        

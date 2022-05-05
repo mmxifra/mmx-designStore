@@ -5,7 +5,6 @@ import db from '../utils/firebaseConfig';
 import swal from 'sweetalert';
 
 const CartOrder = () => {
-
     const test = useContext(CartContext);
 
     const checkout = () => {
@@ -32,14 +31,13 @@ const CartOrder = () => {
             })),
             total: test.cartTotal()
         }
-        console.log (order)
 
         const createOrderInFirestore = async () => {
             const newOrderRef = doc (collection (db,'orders'));
             await setDoc(newOrderRef, order);
             return newOrderRef;
         }
-
+        
         createOrderInFirestore()
             .then(result => swal ({
                 text: 'Tu pedido ha sido confirmado',
@@ -48,7 +46,6 @@ const CartOrder = () => {
                 Button: 'Ok',
             }))
             .catch(error => console.log (error))
-        
         test.emptyCart();
     };
 
