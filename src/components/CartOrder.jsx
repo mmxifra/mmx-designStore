@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
 import db from '../utils/firebaseConfig';
 import swal from 'sweetalert';
 
@@ -8,7 +8,7 @@ const CartOrder = () => {
     const test = useContext(CartContext);
 
     const checkout = () => {
-        
+        // Update stock in firestore after order is placed
         test.cartList.forEach(async (item) => {
             const itemRef = doc(db, 'products', item.id);
             await updateDoc(itemRef, {
@@ -16,6 +16,7 @@ const CartOrder = () => {
             });
         });
 
+        // Fields requies to create order in firestore
         let order = {
             buyer: {
                 name: 'María Xifra',
@@ -31,10 +32,10 @@ const CartOrder = () => {
             })),
             total: test.cartTotal()
         }
-
+        // Create new collection where orders will be placed in firestore
         const createOrderInFirestore = async () => {
             const newOrderRef = doc (collection (db,'orders'));
-            await setDoc(newOrderRef, order);
+            await setDoc(newOrderRef, order); // Create new order inside collection 'orders'
             return newOrderRef;
         }
         
@@ -46,7 +47,7 @@ const CartOrder = () => {
                 Button: 'Ok',
             }))
             .catch(error => console.log (error))
-        test.emptyCart();
+        test.emptyCart(); // After order is created in firestore empty cart
     };
 
     return (

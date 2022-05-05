@@ -11,10 +11,12 @@ const ItemListContainer = () =>{
 
     useEffect(() => {
         const fetchFromFirestore = async () => {
-            let q;
+            let q; // create new variable to search by categories
             if (idCategory === undefined) {
+                // return all products
                 q = query(collection(db, 'products'), orderBy('title'))
             } else {
+                // return only products that match with selected category
                 q = query(collection(db, 'products'), where('categoryId', '==', idCategory))
             }
             const querySnapshot = await getDocs(q);

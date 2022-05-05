@@ -10,16 +10,19 @@ const ItemDetailContainer = () => {
     const { idItem } = useParams();
 
     useEffect(() => {
+        // Search by id for 1 specific item in firestore 
         const fetchOneFromFirestore = async () => {
-            const docRef = doc (db, "products", idItem);
+            const docRef = doc (db, 'products', idItem);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
+                // if item exists it brings all it's data
                 return {
                     id: idItem,
                     ...docSnap.data()
                 }
             } else {
-            console.log("Oops! no pudimos encontrar el producto.");
+                // doc.data() will be undefined in this case
+            console.log('Oops! no pudimos encontrar el producto.');
             }
         }
         return fetchOneFromFirestore()

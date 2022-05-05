@@ -22,6 +22,9 @@ const CartContextProvider = ({children}) => {
           ]);  
         }else{
             isInCart.itemQty += qty;
+            setCartList([
+                ...cartList
+            ]);
         };   
     };
 
@@ -60,7 +63,6 @@ const CartContextProvider = ({children}) => {
     };
 
     // Calcular envio
-
     const shipping = () => {
         let shipCost;
         if(qtyOnCart() <= 5){
